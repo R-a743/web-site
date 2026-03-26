@@ -1,0 +1,220 @@
+
+body {
+    background-color: #0b0d17; /* Uzay siyahı */
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+/* Sayfayı ortalayan ana kutu */
+.container {
+    width: 80%;
+    margin: 0 auto; /* Sağdan ve soldan eşit boşluk bırakır */
+}
+
+/* Menü Tasarımı */
+nav ul {
+    list-style-type: none; /* Noktaları kaldırır */
+    padding: 0;
+}
+
+nav ul li {
+    display: inline; /* Yan yana dizer */
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #00d4ff;
+    text-decoration: none; /* Alt çizgiyi kaldırır */
+}
+
+/* Ana sayfadaki içerik kutularını yapmak için kullandım */
+.sutun-sol, .sutun-sag {
+    width: 80%;          
+    margin: 20px auto;    /* Üstten-alttan boşluk bırakıp ve kutuyu ortalaması için */
+    background-color: #1a1c2c; 
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 5px solid #00d4ff; /* Şık durması için kenara renk ekledim */
+}
+
+
+/* Anasayfa Bilgi Kutuları */
+.bilgi-ozeti {
+    margin: 40px 0;
+}
+
+.bilgi-kutusu {
+    float: left;
+    width: 30%; /* Üç kutu yan yana */
+    margin: 1.5%;
+    background-color: #161b22;
+    padding: 20px;
+    text-align: center;
+    border-radius: 15px;
+    border-bottom: 4px solid #00d4ff; /* Alt kısımdaki mavi şerit */
+    box-sizing: border-box;
+}
+
+.bilgi-kutusu h3 {
+    color: #00d4ff;
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+/* Söz Bölümü */
+.gunun-sozu {
+    text-align: center;
+    margin-top: 50px;
+    color: #c9d1d9;
+    font-style: italic;
+}
+
+.gunun-sozu hr {
+    width: 50%;
+    border: 0;
+    border-top: 1px solid #30363d;
+    margin: 20px auto;
+}
+
+/* Sayfa yapısını korumak için */
+.clear {
+    clear: both;
+}
+
+
+
+body {
+    background-color: #0b0d17;
+    background-image: url('https://www.transparenttextures.com/patterns/stardust.png'); /* arka planın daha güzel olsun ve projemle uyumlu olması için internetten arka plan ekledim */
+    color: #e0e0e0; /* renkler uyumlu olması için gri kullandım  */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Daha güzel bir font */
+    line-height: 1.6; /* okunabilirliği artırmak için satır arası boşluk için kullandım */
+    margin: 0;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.7); /* Menü arkasına hafif şeffaf siyahlık ekledim */
+    padding: 20px 0;
+    border-bottom: 2px solid #00d4ff; /* Altına ince mavi bir çizgi için kullanmdım*/
+    margin-bottom: 30px;
+}
+
+h1, h2, h3 {
+    color: #00d4ff; /* Başlıkların rengi */
+    text-transform: uppercase; /* Başlıkları büyük harf yaptım */
+}
+----------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+/* Gezegen kutularının genel yapısı */
+.gezegen-kutu {
+    width: 30%; 
+    margin: 1.5%; /* Kutular arası boşluk */
+    background-color: #1a1c2c; /* Kutunun arka planı */
+    padding: 15px; /* İç boşluk bıraktım*/
+    text-align: center; /* Yazıları ve resmi ortaladım */
+    border: 1px solid #333; /* İnce bir çerçeve */
+    box-sizing: border-box; /* Padding genişliğe dahil olması için yazdım*/
+}
+
+/* Resimlerin kutudan taşmaması için */
+.gezegen-kutu img {
+    width: 100%; /* Resim kutu kadar geniş olması için */
+    height: auto;
+    border-radius: 50%; /* Resimleri daire içine almak için yaptım */
+}
+
+/* Fareyle üzerine gelince renk değiştirme */
+.gezegen-kutu:hover {
+    border-color: #00d4ff;
+    background-color: #25283d;
+}
+
+/* bu kısmı mobil görünüm için yaptım */
+@media screen and (max-width: 768px) {
+    .gezegen-kutu {
+        width: 100%; /* Kutular artık yan yana değil, alt alta tam genişlikte olsun */
+        float: none; /* Yan yana dizilmeyi iptal et */
+        margin: 10px 0;
+    }
+}
+
+/* Resimlerin, kutuların boyutlarını ayarladım */
+
+.gezegen-kutu {
+    
+    width: 70%;           /* Kutunun genişliği için  */
+    margin: 30px auto;    /* kutuları sayfada ortaladım */
+    background-color: #161b22; 
+    border: 1px solid #30363d;
+    padding: 20px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3); /*  gölgelendirmek için box-shadow kullandım */
+}
+
+/* Resimlerin Boyutu */
+.gezegen-kutu img {
+    width: 200px;         /* Resimleri sabitledim */
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;   
+    border: 2px solid #00d4ff;
+    margin-bottom: 15px;
+}
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+/* Galeri sayfasında görselleri float:left kullanarak yan yana hizaladım. */
+main.container {
+    display: block;      /* Ana alanı blok yapmak için */
+    width: 95%;
+    margin: 0 auto;
+    overflow: hidden;    /* İçindeki floatları temizlemek için */
+}
+
+.galeri-kart-yan {
+    display: block;
+    float: left ;  /* Soldan başlasın diye ekledim */
+    width: 45% ;   /* Genişliği biraz düşürdüm*/
+    margin: 2% ;   /* Kutular arası boşluk */
+    background-color: #161b22;
+    border-left: 6px solid #00d4ff; /* Mavi şerit yaptım */
+    padding: 20px;
+    border-radius: 10px;
+    box-sizing: border-box;  /* box-sizing: border-box kullanarak padding değerlerinin kutu genişliğini bozmasını engelledim.*/
+    min-height: 300px;
+}
+
+/* Resimlerin kutu içine tam olması için kullandım */
+.galeri-kart-yan img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+/* yan yana dizilimin footer'ı etkilememesini sağladım. */
+.clear {
+    clear: both;
+    display: block;
+    width: 100%;
+}
+
+
+footer { clear: both; 
+    
+display: block ; 
+text-align: center;
+padding: 40px 0;
+ width: 100%; }
+
+.galeri-kart-yan { float: left; 
+    width: 45% ; 
+    margin: 2% ;
+    box-sizing: border-box !; }
